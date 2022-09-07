@@ -7,4 +7,6 @@ admin.site.register(Tag)
 class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
 
+admin.site.register(Tag)
 admin.site.register(Post, PostAdmin)
+admin.site.register(comment)
