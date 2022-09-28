@@ -4,7 +4,6 @@ from django.utils import timezone
 from .models import Post
 from blog.forms import CommentForm
 
-
 import logging
 logger = logging.getLogger(__name__)
 
