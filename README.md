@@ -9,8 +9,10 @@ $ django-admin.py startproject blango
 users:
 ```
 codio
+codio@example.com
 password
 
 codio1
+codio1@example.com
 password
 ```
