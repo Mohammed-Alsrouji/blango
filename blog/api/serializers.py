@@ -22,7 +22,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class CommentSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(required = False)
-    creator = UserSerializer(readonly=True)
+    creator = UserSerializer()
 
     class Meta:
         model = Comment
