@@ -11,6 +11,9 @@ class Tag(models.Model):
     def __str__(self):
         return self.value
 
+    class Meta:
+      ordering = ["value"]
+
 
 class Comment(models.Model):
     creator = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -20,6 +23,7 @@ class Comment(models.Model):
     content_object = GenericForeignKey("content_type", "object_id")
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
     modified_at = models.DateTimeField(auto_now=True)
+
     
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
