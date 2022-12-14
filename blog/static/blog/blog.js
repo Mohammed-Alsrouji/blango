@@ -1,9 +1,3 @@
-const theNumber = 1
-let yourName = 'Ben'
-
-if (theNumber === 1) {
-  let yourName = 'Leo'
-  alert(yourName)
+for(let i=0; i<10; i+=1){
+  console.log("for loop i: ")
 }
-
-alert(yourName)
