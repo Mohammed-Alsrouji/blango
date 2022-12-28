@@ -4,12 +4,18 @@ from django.utils import timezone
 from .models import Post
 from blog.forms import CommentForm
 
+
+from django.urls import reverse
+
+
 import logging
 logger = logging.getLogger(__name__)
 
 # Create your views here.
 def post_table(request):
-    return render(request, "blog/post-table.html")
+    return render(
+        request, "blog/post-table.html", {"post_list_url": reverse("post-list")}
+    )
     
 def index(request):
     posts = Post.objects.filter(published_at__lte=timezone.now()).select_related("author")
